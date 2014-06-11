@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/classes-1e2654cdb73e0032151459ef2816c3bfcf6037fe.jar"
+        jar="/Volumes/DATA/MyApp/CallSmsFilter/build/intermediates/exploded-aar/CallSmsFilter/tabSlidingShip/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="143400aa0f01ad64b14c4814b563b2e4e0bda094"/>
+    <item
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/support-v4-19.1.0-42186b70188bead8f2c8180536e8109148d869cb.jar"
+        jar="/Volumes/DATA/Eclipse/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/classes-e35bca0efb39c5a3107057acd67990991e299332.jar"
+        jar="/Volumes/DATA/MyApp/CallSmsFilter/build/intermediates/exploded-aar/CallSmsFilter/actionbarsherlock/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8b61f8b92774c2832bc87bfeb685652da9991ad2"/>
+
+</pre-dex-items>

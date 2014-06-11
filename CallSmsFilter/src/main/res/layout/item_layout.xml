@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_bg"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default">
+
+        <CheckBox
+            android:id="@+id/cbo_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_default" />
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_toRightOf="@+id/cbo_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_default">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_name"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_action_read"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnRemove"
+            android:layout_marginRight="@dimen/margin_default"/>
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_action_discard"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_default"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:text="@string/choose_filter"
+            android:layout_margin="@dimen/margin_default" />
+
+        <Spinner
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_notifi"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:paddingLeft="@dimen/margin_default" />
+
+        <EditText
+            android:id="@+id/ed_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:hint="@string/input_title" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/content_notifi"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:lines="1"
+            android:paddingLeft="@dimen/margin_default" />
+
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:hint="@string/input_content"
+            android:lines="1"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:lines="1"
+            android:paddingLeft="@dimen/margin_default" />
+
+        <EditText
+            android:id="@+id/ed_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:hint="@string/input_phone"
+            android:lines="1"
+            android:layout_weight="1"
+            android:inputType="phone" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/test_notification"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/btn_import_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/import_contact"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_import_call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/import_calllog"
+            android:layout_weight="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:lines="1" />
+
+        <Button
+            android:id="@+id/btn_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:text="@string/filter"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+    </TableRow>
+
+
+</LinearLayout>

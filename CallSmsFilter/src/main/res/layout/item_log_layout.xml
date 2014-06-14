@@ -27,19 +27,19 @@
             android:layout_marginLeft="@dimen/margin_default">
 
             <TextView
-                android:id="@+id/tvName"
+                android:id="@+id/tvPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contact_name"
+                android:text="@string/phone_number"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tvPhoneNumber"
+                android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/phone_number"
+                android:text="@string/time_call"
                 android:textColor="@color/black" />
         </LinearLayout>
 

@@ -1,9 +1,9 @@
 package com.truongtvd.callsmsfilter.model;
 
 /**
- * Created by truongtvd on 6/11/14.
+ * Created by truongtvd on 6/12/14.
  */
-public class CallFilter {
+public class LogFilter {
 
     private int time;
     private String phone;

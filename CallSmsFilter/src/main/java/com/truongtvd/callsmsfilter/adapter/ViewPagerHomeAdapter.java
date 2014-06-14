@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import com.truongtvd.callsmsfilter.R;
 import com.truongtvd.callsmsfilter.fragment.CallLogFragment;
 import com.truongtvd.callsmsfilter.fragment.LogFragment;
-import com.truongtvd.callsmsfilter.fragment.SmsFilterFragment;
 
 
 public class ViewPagerHomeAdapter extends FragmentPagerAdapter {
@@ -21,7 +20,7 @@ public class ViewPagerHomeAdapter extends FragmentPagerAdapter {
 
         super(fm);
         this.context = context;
-        CONTENT = new String[]{context.getString(R.string.sms),
+        CONTENT = new String[]{
                 context.getString(R.string.calllog), context.getString(R.string.log)};
     }
 
@@ -32,9 +31,6 @@ public class ViewPagerHomeAdapter extends FragmentPagerAdapter {
         // TODO Auto-generated method stub
         super.setPrimaryItem(container, position, object);
         if (position == 0) {
-            SmsFilterFragment smsFilterFragment = (SmsFilterFragment) object;
-            smsFilterFragment.init();
-        } else if (position == 1) {
             CallLogFragment callLogFragment = (CallLogFragment) object;
             callLogFragment.init();
         }else if (position == 1) {
@@ -49,18 +45,12 @@ public class ViewPagerHomeAdapter extends FragmentPagerAdapter {
 
         switch (index) {
             case 0:
-                fragment = new SmsFilterFragment();
-
-                break;
-            case 1:
                 fragment = new CallLogFragment();
                 break;
-            case 2:
+            case 1:
                 fragment = new LogFragment();
                 break;
 
-            default:
-                break;
         }
         return fragment;
 

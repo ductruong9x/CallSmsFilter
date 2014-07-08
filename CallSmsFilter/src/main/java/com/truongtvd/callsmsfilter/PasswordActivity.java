@@ -3,6 +3,7 @@ package com.truongtvd.callsmsfilter;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -12,6 +13,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 
 public class PasswordActivity extends Activity implements View.OnClickListener {
@@ -23,6 +26,13 @@ public class PasswordActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.gray_bg);
+            tintManager.setNavigationBarTintResource(R.color.gray_bg);
+        }
         setContentView(R.layout.activity_password);
         edPass = (EditText) findViewById(R.id.ed_pass);
         btn1 = (Button) findViewById(R.id.btn1);

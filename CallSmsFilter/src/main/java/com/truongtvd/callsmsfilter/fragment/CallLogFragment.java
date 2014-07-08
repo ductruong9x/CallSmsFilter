@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
@@ -34,7 +35,7 @@ public class CallLogFragment extends Fragment {
     private CallAdapter adapter;
     private ArrayList<CallFilter> listfilter = new ArrayList<CallFilter>();
     private boolean isLoad = false;
-
+    private ImageButton plus_button;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +44,17 @@ public class CallLogFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mParent = inflater.inflate(R.layout.fragment_layout, null);
+        mParent = inflater.inflate(R.layout.fragment_layout_call, null);
         lvList = (ListView) mParent.findViewById(R.id.list_item);
         loading = (ProgressBar) mParent.findViewById(R.id.load);
+        plus_button=(ImageButton)mParent.findViewById(R.id.button_add);
+        plus_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DialogAdd.class);
+                startActivityForResult(intent, REQUEST_CODE_FILTER);
+            }
+        });
         setHasOptionsMenu(true);
 
         getFilter();
@@ -80,14 +89,14 @@ public class CallLogFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.new_filter:
-                Intent intent = new Intent(getActivity(), DialogAdd.class);
-                startActivityForResult(intent, REQUEST_CODE_FILTER);
-                break;
+//            case R.id.new_filter:
+//                Intent intent = new Intent(getActivity(), DialogAdd.class);
+//                startActivityForResult(intent, REQUEST_CODE_FILTER);
+//                break;
             case R.id.rate:
                 Intent goMoreApp = new Intent(Intent.ACTION_VIEW)
                         .setData(Uri
-                                .parse("https://play.google.com/store/apps/developer?id=Appvn+Software"));
+                                .parse("https://play.google.com/store/apps/developer?id=App+Entertainment"));
                 startActivity(goMoreApp);
                 break;
         }

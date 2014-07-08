@@ -9,7 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/CallSmsFilter" />
-            <option value="$PROJECT_DIR$/actionbarsherlock" />
             <option value="$PROJECT_DIR$/tabSlidingShip" />
           </set>
         </option>

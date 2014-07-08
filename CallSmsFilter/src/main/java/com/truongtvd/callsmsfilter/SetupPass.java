@@ -3,6 +3,7 @@ package com.truongtvd.callsmsfilter;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 
 public class SetupPass extends Activity {
@@ -22,6 +25,13 @@ public class SetupPass extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.white);
+            tintManager.setNavigationBarTintResource(R.color.white);
+        }
         setContentView(R.layout.activity_setup_pass);
         SharedPreferences sharedPreferences=getSharedPreferences("SETUP",MODE_PRIVATE);
         String pass=sharedPreferences.getString("PASSCODE","");

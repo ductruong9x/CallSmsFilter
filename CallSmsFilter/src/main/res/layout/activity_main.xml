@@ -18,15 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/indicatorTabHome"
-        android:layout_above="@+id/ad">
+        android:layout_above="@+id/startAppBanner">
 
     </android.support.v4.view.ViewPager>
-
-    <com.google.android.gms.ads.AdView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/ad"
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/startAppBanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:adSize="SMART_BANNER"
-        app:adUnitId="ca-app-pub-6063844612770322/3818406893" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
 </RelativeLayout>

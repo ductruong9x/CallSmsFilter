@@ -1,2 +1,2 @@
-include ':CallSmsFilter', ':actionbarsherlock'
+include ':CallSmsFilter'
 include ':tabSlidingShip'

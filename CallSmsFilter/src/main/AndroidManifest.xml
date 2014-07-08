@@ -6,9 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <uses-feature android:name="android.hardware.telephony" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -18,8 +16,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:debuggable="false"
-        android:theme="@android:style/Theme.Holo.Light">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"></activity>
@@ -46,12 +43,15 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:taskAffinity="com.appvnfree.callsmsblock.AppWall"
+            android:theme="@android:style/Theme" />
+
+        <activity android:name="com.startapp.android.publish.AppWallActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:taskAffinity="com.appvnfree.callsmsblock.AppWall"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
     </application>
 
 </manifest>

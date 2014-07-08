@@ -2,22 +2,40 @@
 <pre-dex-items>
 
     <item
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/classes-5c477fb23b3ba5411cabc7b62856a81d82d8569b.jar"
+        jar="/Volumes/DATA/MyApp/CallSmsFilter/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
         dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/classes-1e2654cdb73e0032151459ef2816c3bfcf6037fe.jar"
         jar="/Volumes/DATA/MyApp/CallSmsFilter/build/intermediates/exploded-aar/CallSmsFilter/tabSlidingShip/unspecified/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="143400aa0f01ad64b14c4814b563b2e4e0bda094"/>
+        sha1="df23e3f5b28c13b17acee7428de34472b328eb14"/>
     <item
-        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/support-v4-19.1.0-42186b70188bead8f2c8180536e8109148d869cb.jar"
-        jar="/Volumes/DATA/Eclipse/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-3a22e053e9184be2bb9887e8be3228c1d8b5314e.jar"
+        jar="/Volumes/DATA/Eclipse/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
     <item
-        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/classes-e35bca0efb39c5a3107057acd67990991e299332.jar"
-        jar="/Volumes/DATA/MyApp/CallSmsFilter/build/intermediates/exploded-aar/CallSmsFilter/actionbarsherlock/unspecified/classes.jar"
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-b407838c894ed93360e09d37f0802837220d15d6.jar"
+        jar="/Volumes/DATA/MyApp/CallSmsFilter/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="8b61f8b92774c2832bc87bfeb685652da9991ad2"/>
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/systembartint-1.0.3-7a6aa7f54b8f78fd74f2c24d3a0b79bc175ddc12.jar"
+        jar="/Users/truongtvd/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.systembartint/systembartint/1.0.3/de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287/systembartint-1.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287"/>
+    <item
+        dex="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/build/intermediates/pre-dexed/debug/StartAppInApp-2.3.6-9ed54338c0d18f3a5a0b2910b7e95db0d603130b.jar"
+        jar="/Volumes/DATA/MyApp/CallSmsFilter/CallSmsFilter/libs/StartAppInApp-2.3.6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a6267992fa8afeaee712080ffb890f1e41e38aa4"/>
 
 </pre-dex-items>

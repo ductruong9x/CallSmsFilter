@@ -4,15 +4,15 @@ import android.app.ActionBar;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
+import com.startapp.android.publish.StartAppAd;
+import com.startapp.android.publish.StartAppSDK;
 import com.truongtvd.callsmsfilter.adapter.ViewPagerHomeAdapter;
 import com.truongtvd.callsmsfilter.database.DataCallFilterHelper;
 import com.truongtvd.callsmsfilter.database.DataLogHelper;
@@ -26,47 +26,40 @@ public class MainActivity extends FragmentActivity {
     private ViewPager vpMain;
     private PagerSlidingTabStrip indicator;
     private final static int REQUEST_CODE_FILTER=5;
-    private AdView adView;
     private DataCallFilterHelper dataCallFilterHelper;
     private DataLogHelper dataLogHelper;
-    private InterstitialAd interstitialAd;
-    private String UNIT_ID="ca-app-pub-6063844612770322/5295140093";
+    private String dev_id="108403113";
+    private String app_id="207161764";
+    private StartAppAd startAppAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintEnabled(true);
+            tintManager.setNavigationBarTintEnabled(true);
+            tintManager.setStatusBarTintResource(R.color.holo);
+            tintManager.setNavigationBarTintResource(R.color.holo);
+        }
+        StartAppSDK.init(this, dev_id, app_id);
         setContentView(R.layout.activity_main);
-        adView=(AdView)findViewById(R.id.ad);
-        adView.loadAd(new AdRequest.Builder().build());
-        interstitialAd=new InterstitialAd(this);
-        interstitialAd.setAdUnitId(UNIT_ID);
-        interstitialAd.loadAd(new AdRequest.Builder().build());
-        interstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-            //    interstitialAd.show();
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                super.onAdFailedToLoad(errorCode);
-                interstitialAd.loadAd(new AdRequest.Builder().build());
-            }
-        });
-
+        StartAppAd.showSlider(this);
+        startAppAd = new StartAppAd(this);
+        startAppAd.loadAd();
         actionBar = getActionBar();
+        actionBar.setIcon(android.R.color.transparent);
         actionBar.setTitle(Html.fromHtml("<font color='#ffffff' size='25'>"
                 + getString(R.string.app_name) + "</font>"));
         actionBar.setBackgroundDrawable(new ColorDrawable(Color
-                .parseColor("#33b5e5")));
+                .parseColor("#3f51b5")));
         dataCallFilterHelper=new DataCallFilterHelper(MainActivity.this);
         dataCallFilterHelper.getWritableDatabase();
         dataLogHelper=new DataLogHelper(MainActivity.this);
         dataLogHelper.getWritableDatabase();
         vpMain = (ViewPager) findViewById(R.id.vpMain);
         indicator = (PagerSlidingTabStrip) findViewById(R.id.indicatorTabHome);
-        indicator.setIndicatorColor(Color.parseColor("#33b5e5"));
+        indicator.setIndicatorColor(Color.parseColor("#3f51b5"));
         indicator.setTextColor(Color.BLACK);
         adapter = new ViewPagerHomeAdapter(MainActivity.this, getSupportFragmentManager());
         vpMain.setAdapter(adapter);
@@ -127,7 +120,7 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
-        interstitialAd.show();
+        startAppAd.onBackPressed();
         super.onBackPressed();
     }
 }

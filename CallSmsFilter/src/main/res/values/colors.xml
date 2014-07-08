@@ -2,6 +2,6 @@
 <resources>
     <color name="gray_bg">#EAEAEA</color>
     <color name="black">#000000</color>
-    <color name="holo">#33b5e5</color>
+    <color name="holo">#3f51b5</color>
     <color name="white">#FFFFFF</color>
 </resources>
